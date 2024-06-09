@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="Task1.css">
+</head>
+<body>
+    <center><header class="header">
+        <div class="logo-container">
+            <img src="../asserts/Logo2.jpg" alt="Logo" class="logo">
+            <span class="logo-text">Pride</span>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+    </header></center>
+      <div class="navbar">
+        <nav>
+           <ul class="nav nav-pills">
+        <li class="nav-item"><a href="Task.html"  class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="jwell.html" target="_blank" class="nav-link">Jwells</a></li>
+        <li class="nav-item"><a href="contact.html" target="_blank" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="About.html" target="_blank" class="nav-link">About</a></li>
+      </ul>
+  
+        </nav>
+        </div>
+        
+      <br>
+    
+
+
+    <div class="container">
+        <h1>WE'D LOVE TO HEAR FROM YOU!</h1>
+        <p>From choosing an engagement ring or gift to providing in-store appointments and suggestions, our PRIDE client experts are pleased to assist you in any way.</p>
+        <form action="#" method="post">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number *</label>
+            <div class="phone-input">
+                <select id="country-code" name="country-code">
+                    <option value="+91">+91</option>
+                    <!-- Add more country codes as needed -->
+                </select>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <label for="enquiry">Enquiry Type *</label>
+            <select id="enquiry" name="enquiry" required>
+                <option value="">Select Enquiry Type</option>
+                <option value="">Product Different</option>
+                <option value="">More Carrat</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="message">Feedback *</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <br>
+            <div class="gallery">
+                <img src="../asserts/gold2.jpg" alt="Image 1">
+                <img src="../asserts/gold44" alt="Image 2">
+                <img src="../asserts/jwell11" alt="Image 3">
+                <img src="../asserts/jwell14.jpg" alt="Image 4">
+                <img src="../asserts/jwell16" alt="Image 5">
+                <img src="../asserts/jwell19.jpg" alt="Image 5">
+              </div>
+
+            <div class="checkboxes">
+                <label>
+                    <input type="checkbox" name="updates"> I would like to receive updates from PRIDE Jewellers using any method(s) I have provided above.
+                </label>
+                <label>
+                    <input type="checkbox" name="privacy" required> By submitting this form, I certify that I have read and accepted the Privacy Policy of PRIDE Jewellers.
+                </label>
+            </div>
+
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+    <footer>
+    <div class="footer-container">
+        <div class="payment-methods">
+            <h4>We Accept</h4>
+            <img src="https://logowik.com/content/uploads/images/visa-new-20215093.jpg" alt="Visa">
+            <img src="https://i.pinimg.com/originals/8d/ec/e1/8dece15cc40aaf66ed47f6591b639d06.png" alt="Gpay">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png" alt="PayPal">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Maestro_logo.png" alt="Maestro">
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="separator">
+            <span></span>
+            <img src="../asserts/jwell16" alt="Rings">
+            <span></span>
+        </div>
+        <p>&copy; 2024 PRIDE Jewellery. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

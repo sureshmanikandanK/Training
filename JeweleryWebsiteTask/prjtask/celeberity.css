@@ -1,0 +1,68 @@
+
+
+.celebrity-corner {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-section {
+    background-color: #f8f1e9;
+    padding: 20px;
+    width: 40%;
+    min-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-section h2 {
+    margin-bottom: 10px;
+}
+
+.text-section p {
+    color: #555;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.image {
+    margin: 10px;
+    position: relative;
+}
+
+.image img {
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.image p {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 14px;
+}
