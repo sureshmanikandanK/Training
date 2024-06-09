@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #f8f1e9;
+    color: #000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.payment-methods, .social-media {
+    margin: 10px;
+}
+
+.payment-methods img, .social-media img {
+    margin: 0 10px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #d3c1a5;
+    padding-top: 10px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.separator span {
+    display: block;
+    height: 1px;
+    width: 100px;
+    background-color: #d3c1a5;
+}
+
+.separator img {
+    margin: 0 10px;
+    height: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
