@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function greeting(){
+            return "Good Afternoon All <br>";
+        }
+        // document.write(greeting());
+
+        function welcome(company){
+            return `Welcome you all in ${company} ${greeting()}`;
+        }
+        document.write(welcome("changepond",greeting));
+        
+        setTimeout(() => {
+            window.alert("Need To Blink Your Eyes")
+            
+        }, 2000);
+        let count=0;
+        setInterval(() => {
+            console.log(count +=5)
+        }, 1000);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let courses = ["React", "Angular", "Java", "Python"];
+        console.log(courses);
+        console.log(courses.length - 1);
+        console.log(courses[1]);
+        courses[2] = "Advanced Java"
+        console.log(courses[2]);
+        console.log(courses);
+
+        for (let i = 0; i <= courses.length - 1; i++) {
+            document.write(courses[i]);
+           
+        }
+        document.write("<br>");
+        for (let course of courses) {
+            document.write(course, ",");
+        }
+        document.write("<br>");
+        for (let course in courses) {
+            document.write(course, ",");
+        } document.write("<br>");
+            courses.push("NodeJs");
+            document.write(courses,"<br>");
+
+            courses.pop();
+            document.write(courses,"<br>");
+
+            courses.unshift("NodeJs");
+            document.write(courses,"<br>");
+
+            courses.shift("NodeJs");
+            document.write(courses,"<br>");
+
+            courses.splice(3,0,"SAAS","TypeScript");
+            document.write(courses,"<br>");
+           
+            courses.splice(4,2);
+            document.write(courses,"<br>");
+           
+            courses.splice(2,1,"WordPress","Digital Marketing");
+            document.write(courses,"<br>");
+           
+            console.log(courses.toString());
+
+            console.log(courses.join("*"));
+
+    </script>
+</body>
+
+</html>

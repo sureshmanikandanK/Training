@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+            // 1.simple function
+        function greeting(){
+            return "Good Morning Friends";
+        }
+
+        document.write(greeting() ,"<br>");
+        
+        let greet = greeting();
+        document.write(greet,"<br>");
+
+        // 2.Parameterize function
+
+        function welcome(std1,std2,std3){
+            return`Welcome You ${std1} ${std2} ${std3} in Changepond`;
+        }
+        document.write(welcome(" Suresh" , " Ravi", " Dhanesh") ,"<br>");
+
+        // 3.Anonymous function:
+        let add = function(){
+            return 100+200;
+        };
+
+        document.write(add() ,"<br>");
+        // 4.Arrow function
+
+        let sub = () => {
+            return 500-400;
+        };
+        document.write(sub(),"<br>");
+
+        let sub1 = (num1, num2) => {
+            return num1 - num2;
+        };
+        document.write(sub1(500, 50),"<br>");
+
+        // 5.Optional Parameterize Function
+
+        let fullName = (fname,lname,mname)=>{
+            return ` ${fname} ${mname} ${lname}`;
+        }
+        document.write(fullName("Suresh" ,"Manikandan","k"),"<br>");
+        document.write(fullName("Suresh" ,"k"),"<br>");
+        document.write(fullName(),"<br>");
+
+        // 6.Rest parameterize Function
+
+        let empList = (...stg) =>{
+            return stg;
+        }
+        document.write(empList("Rahul","Rahul","Rahul","Rahul","Rahul","Rahul"),"<br>");
+
+    </script>
+</body>
+</html>

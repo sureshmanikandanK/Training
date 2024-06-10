@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../asserts/Images/Captain.jfif" id="img1" alt="Captain"> <br>
+    <strong id="imgname">Captain</strong><br>
+    <button type="button" onclick="changeimage()">changeimage</button>
+
+    <script>
+        function changeimage(){
+            document.getElementById("img1").src="../asserts/Images/Image1.jfif";
+            document.getElementById("imgname").innerHTML= "facebook";
+           }
+           if(changeimage()){
+            document.getElementById("img1").src="../asserts/Images/Captain.jfif";
+            document.getElementById("imgname").innerHTML= "Captain";
+           
+        }
+       
+    </script>
+</body>
+</html>
