@@ -1,0 +1,39 @@
+#toolbox {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(207, 30, 148);
+    background-color: rgb(21, 156, 145);
+    font-weight: 700;
+}
+
+#displayBox {
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgba(15, 148, 148, 0.712);
+    margin: 30px auto;
+    padding: 50px;
+    border-radius: 30px 30px;
+    background-color: rgb(87, 38, 72);
+}
+
+.operation-button {
+    margin: 5px;
+}
+
+h2
+{
+    color: rgb(187, 117, 37);
+    font-style: italic;
+}
+button
+{
+    font-style: italic;
+}

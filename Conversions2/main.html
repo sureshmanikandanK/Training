@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Tool Web Application</title>
+    <link rel="stylesheet" href="main.css">
+
+
+<body>
+    <div id="displayBox">
+    </div>
+    <div id="toolbox">
+        <div class="button" onclick="showCalculator()">Calculator</div>
+        <div class="button" onclick="showCurrencyConverter()">Currency Converter</div>
+        <div class="button" onclick="showAgeCalculator()">Age Calculator</div>
+        <div class="button" onclick="showBMICalculator()">BMI Calculator</div>
+        <div class="button" onclick="showTemperatureConverter()">Temperature Converter</div>
+        <div class="button" onclick="showPercentageCalculator()">Percentage Calculator</div>
+    </div>
+
+
+    <script>
+        function showCalculator() {
+            document.getElementById('displayBox').innerHTML = `
+                <h2>Calculator</h2>
+                <input id="num1" type="number" placeholder="Number 1">
+                <input id="num2" type="number" placeholder="Number 2">
+                <button class="operation-button" onclick="calculate('add')">Add</button>
+                <button class="operation-button" onclick="calculate('subtract')">Subtract</button>
+                <button class="operation-button" onclick="calculate('multiply')">Multiply</button>
+                <button class="operation-button" onclick="calculate('divide')">Divide</button>
+                <p id="calcResult"></p>
+            `;
+        }
+
+        function calculate(operation) {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            let result = 0;
+
+            if (operation === 'add') {
+                result = num1 + num2;
+            } else if (operation === 'subtract') {
+                result = num1 - num2;
+            } else if (operation === 'multiply') {
+                result = num1 * num2;
+            } else if (operation === 'divide') {
+                result = num1 / num2;
+            }
+
+            document.getElementById('calcResult').innerText = `Result: ${result}`;
+        }
+
+        function showCurrencyConverter() {
+            document.getElementById('displayBox').innerHTML = `
+                <h2>Currency Converter</h2>
+                <input id="rupees" type="number" placeholder="Enter Rupees">
+                <button onclick="convertCurrency('dollar')">Dollar</button>
+                <button onclick="convertCurrency('pound')">Pound</button>
+                <button onclick="convertCurrency('dinar')">Dinar</button>
+                <p id="currencyResult"></p>
+            `;
+        }
+
+        function convertCurrency(currency) {
+            const rupees = parseFloat(document.getElementById('rupees').value);
+            let rate = 0;
+            if (currency === 'dollar') rate = 0.013;
+            if (currency === 'pound') rate = 0.010;
+            if (currency === 'dinar') rate = 0.004;
+            const result = rupees * rate;
+            document.getElementById('currencyResult').innerText = `Converted to ${currency}: ${result}`;
+        }
+
+        function showAgeCalculator() {
+            document.getElementById('displayBox').innerHTML = `
+                <h2>Age Calculator</h2>
+                <input id="birthYear" type="number" placeholder="Enter Birth Year">
+                <button onclick="calculateAge()">Calculate Age</button>
+                <p id="ageResult"></p>
+            `;
+        }
+
+        function calculateAge() {
+            const birthYear = parseInt(document.getElementById('birthYear').value);
+            const currentYear = new Date().getFullYear();
+            const age = currentYear - birthYear;
+            document.getElementById('ageResult').innerText = `Your age is: ${age}`;
+        }
+
+        function showBMICalculator() {
+            document.getElementById('displayBox').innerHTML = `
+                <h2>BMI Calculator</h2>
+                <input id="weight" type="number" placeholder="Weight in kg">
+                <input id="height" type="number" placeholder="Height in cm">
+                <button onclick="calculateBMI()">Calculate BMI</button>
+                <p id="bmiResult"></p>
+            `;
+        }
+
+        function calculateBMI() {
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value) / 100;
+            const bmi = weight / (height * height);
+            document.getElementById('bmiResult').innerText = `Your BMI is: ${bmi.toFixed(2)}`;
+        }
+
+        function showTemperatureConverter() {
+            document.getElementById('displayBox').innerHTML = `
+                <h2>Temperature Converter</h2>
+                <input id="celsius" type="number" placeholder="Celsius">
+                <button onclick="convertTemperature()">Convert to Fahrenheit</button>
+                <p id="tempResult"></p>
+            `;
+        }
+
+        function convertTemperature() {
+            const celsius = parseFloat(document.getElementById('celsius').value);
+            const fahrenheit = (celsius * 9 / 5) + 32;
+            document.getElementById('tempResult').innerText = `Temperature in Fahrenheit: ${fahrenheit}`;
+        }
+
+        function showPercentageCalculator() {
+            document.getElementById('displayBox').innerHTML = `
+                <h2>Percentage Calculator</h2>
+                <input id="value" type="number" placeholder="Value">
+                <input id="total" type="number" placeholder="Total">
+                <button onclick="calculatePercentage()">Calculate Percentage</button>
+                <p id="percentageResult"></p>
+            `;
+        }
+
+        function calculatePercentage() {
+            const value = parseFloat(document.getElementById('value').value);
+            const total = parseFloat(document.getElementById('total').value);
+            const percentage = (value / total) * 100;
+            document.getElementById('percentageResult').innerText = `Percentage: ${percentage.toFixed(2)}%`;
+        }
+    </script>
+</body>
+
+</html>
